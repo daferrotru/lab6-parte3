@@ -37,6 +37,8 @@ public class ServiciosAlquilerFactory {
                         install(JdbcHelper.MySQL);                        
                         setClassPathResource("mybatis-config.xml");                        
                         bind(ServiciosAlquiler.class).to(ServiciosAlquilerItemsImpl.class);
+                        bind(ItemDAO.class).to(MyBATISItemDAO.class);
+                        bind(ClienteDAO.class).to(MyBATISClienteDAO.class);
                     }
 
                 }
